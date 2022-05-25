@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.parent {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #004953;
+    height: 100vh;
+}
+
+.login-container {
+    height: 80vh;
+    width: 100%;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    /* background-color: rgba(63, 85, 105, 0.445); */
+    min-width: 300px;
+}
+
+h1, h2 {
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.login-form {
+    width: 28rem;
+    padding: 5rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 35rem;
+    /* background-color: rgba(63, 85, 105, 0.445); */
+}
+
+.form-heading {
+    /* margin-top: 2rem; */
+    color: white;
+    padding: 0 1rem 0 0;
+}
+
+.label-box1 {
+    padding-top: 1rem;
+    place-content: start;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
+.label-box2 {
+    padding-top: 1rem;
+    place-content: start;
+    border-bottom: 1px solid gainsboro;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.sign-btn {
+    margin-top: 2rem;
+    width: 50%;
+    height: 4em;
+    place-content: center;
+    display: flex;
+    align-items: center;
+    color: black;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: #00FA9A;
+    cursor: pointer;
+}
+
+.up-btn {
+    margin-top: 2rem;
+    width: 50%;
+    height: 4em;
+    place-content: center;
+    display: flex;
+    align-items: center;
+    color: black;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: #387bf8;
+    cursor: pointer;
+
+}
+
+.sign-btn:hover, .up-btn:hover {
+
+    transform: scale(0.99);
+    box-shadow: 0 0 110px rgba(33, 33, 33, .2);
+
+}
+
+.input-email {
+    height: 3rem;
+    color: white;
+    outline: none;
+    border: none;
+    background-color: #004953;
+}
+
+.input-pw {
+    border: none;
+    outline: none;
+    height: 3rem;
+    color: white;
+    background-color: #004953;
+}
+
+.bull {
+    color: #FFAB00;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.bear {
+    color: #ff0000;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    color: #00FA9A !important;
+}
