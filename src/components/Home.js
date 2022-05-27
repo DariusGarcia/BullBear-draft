@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import StocksGraphQL from "./StocksGraphQL";
 
 function Home() {
+  const [value, setValue] = useState("");
+  const [ticker, setTicker] = useState([]);
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!ticker.includes(value)) {
+      setTicker(ticker.concat(value));
+      setValue("");
+    }
+    console.log(ticker);
+  };
+
   return (
     <div className="home-parent">
       <div className="logo-header">
@@ -22,6 +38,8 @@ function Home() {
           Enter ticker: <span id="dollar">$</span>
         </label>
         <input
+          value={value}
+          onChange={handleChange}
           onInput={(e) =>
             (e.target.value = ("" + e.target.value).toUpperCase())
           }
@@ -29,12 +47,17 @@ function Home() {
           type="text"
           placeholder="ex: MSFT"
         ></input>
+        <button className="search-btn" onSubmit={handleSubmit}>
+          Search
+        </button>
       </div>
       <div className="main-container">
         <div className="stocks-list">
-          <h2 className="stock-box">1. $MSFT</h2>
-
+          {/* {ticker.map((addedTicker) => (
+            <StocksGraphQL name={addedTicker} key={addedTicker}></StocksGraphQL>
+          ))} */}
           <StocksGraphQL />
+          <h2 className="stock-box">1. $MSFT</h2>
         </div>
         <div className="stock-nav">
           <p>My Stocks</p>

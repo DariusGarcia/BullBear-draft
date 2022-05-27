@@ -68,8 +68,10 @@ input {
 
 .main-container {
     display: flex;
-    padding: 0 5rem;
-    justify-content: space-between;
+    /* padding: 0 7rem 0 4rem; */
+    justify-content: space-around;
+
+
 }
 
 
@@ -78,10 +80,11 @@ input {
     /* justify-content: center; */
     height: 50vh;
     width: 60vw;
-    background-color: gainsboro;
+    background-color: rgb(231, 231, 231);
     border-radius: 30px;
     color: black;
     float: left;
+    box-shadow: 5px 5px 15px #818181;
 
 }
 
@@ -92,6 +95,8 @@ input {
     height: 50vh;
     background-color: rgb(36, 36, 36);
     border-radius: 30px;
+    padding: 1rem;
+    box-shadow: 5px 5px 15px #818181;
 }
 
 .search-box {
@@ -99,6 +104,7 @@ input {
     display: flex;
     justify-content: start;
     align-items: center;
+    margin-top: 3rem;
 }
 
 #stock-market {
@@ -124,6 +130,7 @@ input {
 
 #search-label {
     color: #00FA9A;
+    padding-left: 3rem;
 }
 
 #dollar {
@@ -132,4 +139,25 @@ input {
 
 p {
     color: rgb(255, 255, 255);
+}
+
+.search-btn {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 2px;
+    height: 30px;
+    padding: 10px;
+    margin-left: 10px;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.search-btn:hover {
+    background-color: #00FA9A;
+    opacity: .98;
+    transform: scale(.99);
+    box-shadow: 0px 0px 5px #00FA9A;
 }
