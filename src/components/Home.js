@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Home.css";
 import StocksGraphQL from "./StocksGraphQL";
 
@@ -17,15 +16,28 @@ function Home() {
         <li>Portfolio</li>
         <li>Messages</li>
       </ul>
-      <div className="main-container">
+      <div className="search-box">
         <h2 id="stock-market">Stock Market</h2>
+        <label id="search-label">
+          Enter ticker: <span id="dollar">$</span>
+        </label>
+        <input
+          onInput={(e) =>
+            (e.target.value = ("" + e.target.value).toUpperCase())
+          }
+          className="search-bar"
+          type="text"
+          placeholder="ex: MSFT"
+        ></input>
+      </div>
+      <div className="main-container">
+        <div className="stocks-list">
+          <h2 className="stock-box">1. $MSFT</h2>
 
-        <div className="stocks-container">
-          <div className="stocks-list">
-            <h2 className="stock-box">1. $MSFT</h2>
-
-            <StocksGraphQL />
-          </div>
+          <StocksGraphQL />
+        </div>
+        <div className="stock-nav">
+          <p>My Stocks</p>
         </div>
       </div>
     </div>

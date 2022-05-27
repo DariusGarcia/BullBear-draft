@@ -7,9 +7,8 @@
 .home-parent {
     /* margin: 0 auto;
     padding: 0; */
-    background-color: #181818;
+    background-color: #0f0f0f;
     height: 100vh;
-    overflow: hidden;
 }
 
 .nav-list {
@@ -22,6 +21,13 @@
     justify-content: flex-end;
     position: relative;
     cursor: pointer;
+}
+
+.search-bar {
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-title {
@@ -62,32 +68,68 @@ input {
 
 .main-container {
     display: flex;
-    flex-direction: column;
-    place-content: center;
-    align-items: center;
-    padding: 10rem 0 0 0rem;
+    padding: 0 5rem;
+    justify-content: space-between;
 }
 
-.stocks-container {}
-
-#stock.market {
-    /* display: flex;
-    align-items: center;
-    padding: 10rem 0 0 12rem;
-    position: relative; */
-    color: rgb(220, 220, 220);
-}
 
 .stocks-list {
-
+    display: flex;
+    /* justify-content: center; */
     height: 50vh;
-    width: 80vw;
+    width: 60vw;
     background-color: gainsboro;
     border-radius: 30px;
     color: black;
+    float: left;
 
+}
+
+.stock-nav {
+    width: 25vw;
+    height: 70vh;
+    float: right;
+    height: 50vh;
+    background-color: rgb(36, 36, 36);
+    border-radius: 30px;
+}
+
+.search-box {
+    padding-left: 4rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#stock-market {
+    color: rgb(185, 185, 185);
 }
 
 .stock-box {
     color: black;
+}
+
+
+.search-bar {
+    height: 30px;
+    width: 20%;
+    margin-left: 4px;
+    padding-left: 4px;
+    outline: 1px solid #00FA9A;
+    border: none;
+    background: transparent;
+    box-shadow: 50px;
+    color: white;
+}
+
+#search-label {
+    color: #00FA9A;
+}
+
+#dollar {
+    color: white !important;
+}
+
+p {
+    color: rgb(255, 255, 255);
 }

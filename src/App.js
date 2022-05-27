@@ -6,11 +6,13 @@ import { Link } from "react-router-dom";
 import Login from "./components/Login";
 //importing landing component
 import Home from "./components/Home";
+import FetchStocks from "./components/fetchStocks";
 
 function App() {
   return (
     <div className="App">
       <Home />
+
       <Login />
     </div>
   );
