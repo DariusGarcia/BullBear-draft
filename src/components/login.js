@@ -32,7 +32,7 @@ const Login = () => {
             </label>
             <input
               className="input-pw"
-              type="text"
+              type="password"
               name="name"
               placeholder=" *******"
               required

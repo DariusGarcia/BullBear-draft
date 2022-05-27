@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-parent {
+    /* margin: 0 auto;
+    padding: 0; */
+    background-color: #181818;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.nav-list {
+    color: white;
+    list-style-type: none;
+    padding: 38px 48px 48px 48px;
+    display: flex;
+    align-items: end;
+    gap: 3rem;
+    justify-content: flex-end;
+    position: relative;
+    cursor: pointer;
+}
+
+.home-title {
+    /* color: #00FA9A;
+    font-size: 3rem; */
+    font-size: 3rem;
+    position: absolute;
+    display: flex;
+    justify-content: start;
+    background-image: linear-gradient(to right, #DC281E, #F00000);
+    background-clip: text;
+    color: transparent;
+    margin-left: 48px;
+    z-index: 100;
+}
+
+input {
+    display: block;
+}
+
+
+#bull {
+
+    background-image: linear-gradient(90deg, #00FA9A, #00965c) !important;
+    background-clip: text !important;
+    color: transparent !important;
+
+}
+
+#bear {
+
+    background-image: linear-gradient(180deg, rgb(133, 0, 0), #ff0000) !important;
+    background-clip: text !important;
+    color: transparent !important;
+
+
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+    padding: 10rem 0 0 0rem;
+}
+
+.stocks-container {}
+
+#stock.market {
+    /* display: flex;
+    align-items: center;
+    padding: 10rem 0 0 12rem;
+    position: relative; */
+    color: rgb(220, 220, 220);
+}
+
+.stocks-list {
+
+    height: 50vh;
+    width: 80vw;
+    background-color: gainsboro;
+    border-radius: 30px;
+    color: black;
+
+}
+
+.stock-box {
+    color: black;
+}
