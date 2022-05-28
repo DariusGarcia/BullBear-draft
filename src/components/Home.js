@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import "./Home.css";
 import StocksGraphQL from "./StocksGraphQL";
 
-function Home() {
+function Home(props) {
   const [value, setValue] = useState("");
   const [ticker, setTicker] = useState([]);
 
   const handleChange = (event) => {
     setValue(event.target.value);
+    // setTicker(event.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -34,11 +35,12 @@ function Home() {
       </ul>
       <div className="search-box">
         <h2 id="stock-market">Stock Market</h2>
-        <form className="stocks-form">
+        <form className="stocks-form" onSubmit={handleSubmit}>
           <label id="search-label">
             Enter ticker: <span id="dollar">$</span>
           </label>
           <input
+            autoFocus
             value={value}
             onChange={handleChange}
             onInput={(e) =>
@@ -48,14 +50,15 @@ function Home() {
             type="text"
             placeholder="ex: MSFT"
           ></input>
-          <button className="search-btn" onSubmit={handleSubmit}>
-            Search
-          </button>
+          <button className="search-btn">Search</button>
         </form>
       </div>
       <div className="main-container">
         <div className="stocks-list">
-          <StocksGraphQL />
+          {/* <StocksGraphQL /> */}
+          {ticker.map((favTicker) => (
+            <StocksGraphQL name={favTicker} key={favTicker}></StocksGraphQL>
+          ))}
         </div>
         <div className="stock-nav">
           <p>My Stocks</p>

@@ -1,0 +1,27 @@
+.class {
+    background-color: grey;
+    width: auto;
+    height: 50%;
+    margin: 10px;
+    padding: 3px 3px 3px 3px;
+    border-radius: 15px;
+    font-size: .8rem;
+}
+
+.class:hover {
+    transform: scale(1.01);
+    box-shadow: 3px 3px 3px 3px #303030;
+}
+
+.stock-titles-p {
+    color: black !important;
+    font-size: bold;
+}
+
+.class-title {
+    color: #00FA9A !important;
+}
+
+#ticker-title {
+    color: #00FA9A !important;
+}

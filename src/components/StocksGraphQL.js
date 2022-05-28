@@ -22,7 +22,7 @@ function StocksGraphQL(props) {
       },
     };
     fetch(
-      "https://alpha-vantage.p.rapidapi.com/query?function=GLOBAL_QUOTE&symbol=AAPL&datatype=json",
+      `https://alpha-vantage.p.rapidapi.com/query?function=GLOBAL_QUOTE&symbol=${props.name}&datatype=json`,
       options
     )
       .then((response) => response.json())
@@ -34,33 +34,28 @@ function StocksGraphQL(props) {
         setTickerPrice(myRes[4]);
         setClosingPrice(myRes[7]);
         console.log(myRes[7]);
+        console.log(myRes);
       })
       .catch((err) => console.error(err));
     // console.log(response);
-  }, []);
+  }, [props.name]);
 
   let info;
 
   if (ticker) {
     info = (
       <div className="info-div">
-        <div className="first">
-          <p className="class-titles-p">Stock:</p>
-          <p className="class-info-p" id="title">
-            {ticker}{" "}
-          </p>
-        </div>
         <div className="second">
-          <p className="class-titles-p" id="department">
-            Department:
+          <p className="stock-titles-p" id="department">
+            Current price:
           </p>{" "}
-          <p className="class-info-p">{tickerPrice}</p>
+          <p className="stock-info-p">{tickerPrice}</p>
         </div>
         <div className="third">
-          <p className="class-titles-p" id="description">
-            Description:
+          <p className="stock-titles-p" id="description">
+            Previous closing price:
           </p>{" "}
-          <p className="class-info-p">{closingPrice}</p>
+          <p className="stock-info-p">{closingPrice}</p>
         </div>
       </div>
     );
@@ -73,13 +68,10 @@ function StocksGraphQL(props) {
   return (
     <div className="class">
       <div className="class-title">
-        <h2>{ticker}</h2>
+        <h2 id="ticker-title">{ticker}</h2>
       </div>
       <div className="class-title">
-        <p>{tickerPrice}</p>
-      </div>
-      <div className="class-title">
-        <p>{closingPrice}</p>
+        <p>{info}</p>
       </div>
     </div>
   );
