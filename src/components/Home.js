@@ -34,30 +34,28 @@ function Home() {
       </ul>
       <div className="search-box">
         <h2 id="stock-market">Stock Market</h2>
-        <label id="search-label">
-          Enter ticker: <span id="dollar">$</span>
-        </label>
-        <input
-          value={value}
-          onChange={handleChange}
-          onInput={(e) =>
-            (e.target.value = ("" + e.target.value).toUpperCase())
-          }
-          className="search-bar"
-          type="text"
-          placeholder="ex: MSFT"
-        ></input>
-        <button className="search-btn" onSubmit={handleSubmit}>
-          Search
-        </button>
+        <form className="stocks-form">
+          <label id="search-label">
+            Enter ticker: <span id="dollar">$</span>
+          </label>
+          <input
+            value={value}
+            onChange={handleChange}
+            onInput={(e) =>
+              (e.target.value = ("" + e.target.value).toUpperCase())
+            }
+            className="search-bar"
+            type="text"
+            placeholder="ex: MSFT"
+          ></input>
+          <button className="search-btn" onSubmit={handleSubmit}>
+            Search
+          </button>
+        </form>
       </div>
       <div className="main-container">
         <div className="stocks-list">
-          {/* {ticker.map((addedTicker) => (
-            <StocksGraphQL name={addedTicker} key={addedTicker}></StocksGraphQL>
-          ))} */}
           <StocksGraphQL />
-          <h2 className="stock-box">1. $MSFT</h2>
         </div>
         <div className="stock-nav">
           <p>My Stocks</p>
