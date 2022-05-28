@@ -1,6 +1,6 @@
 # BullBear
 
-### BullBear is a React wep app that lets users add stocks from the S&P500 to their own personal watch list. 
+### BullBear is a React web app that lets users add stocks from the S&P500 to their own personal watch list. 
 
 
 ### User Stories
