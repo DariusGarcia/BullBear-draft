@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import Login from "./components/login";
 //importing landing component
 import Home from "./components/Home";
-import FetchStocks from "./components/fetchStocks";
 
 function App() {
   return (

@@ -1,7 +1,6 @@
 import "./StocksGraphQL.css";
 
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 
 function StocksGraphQL(props) {
   const [ticker, setTicker] = useState([]);

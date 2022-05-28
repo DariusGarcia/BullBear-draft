@@ -1,4 +1,8 @@
 import "./login.css";
+<<<<<<< HEAD
+=======
+import React from "react";
+>>>>>>> connectingAPI
 // import topo from '../topo.jpg';
 
 const Login = () => {
