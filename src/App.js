@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // importing login component
-import Login from "./components/Login";
+import Login from "./components/login";
 //importing landing component
 import Home from "./components/Home";
 import FetchStocks from "./components/fetchStocks";

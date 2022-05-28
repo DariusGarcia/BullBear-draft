@@ -1,4 +1,4 @@
-import "./Login.css";
+import "./login.css";
 // import topo from '../topo.jpg';
 
 const Login = () => {
