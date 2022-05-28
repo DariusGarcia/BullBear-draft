@@ -3,18 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  /* background-color: #004953; */
 }
 
 .App {
   font-size: 100%;
-  text-align: center;
   margin: 0 auto;
   padding: 0;
   left: 0;
-
-  /* background-image: url('../src/topo.jpg'); */
-
 }
 
 .App-logo {

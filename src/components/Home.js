@@ -23,22 +23,17 @@ function Home(props) {
   return (
     <div className="home-parent">
       <div className="logo-header">
-        <h1 className="home-title">
-          <span id="bull">Bull</span>
-          <span id="bear">Bear</span>
-        </h1>
+        <h1 className="home-title">BullBear</h1>
       </div>
       <ul className="nav-list">
         <li>Market</li>
         <li>Portfolio</li>
         <li>Messages</li>
       </ul>
+      {/* <h2 id="stock-market">Stock Market</h2> */}
       <div className="search-box">
-        <h2 id="stock-market">Stock Market</h2>
         <form className="stocks-form" onSubmit={handleSubmit}>
-          <label id="search-label">
-            Enter ticker: <span id="dollar">$</span>
-          </label>
+          <label id="search-label">Stock Market</label>
           <input
             autoFocus
             value={value}
@@ -50,16 +45,17 @@ function Home(props) {
             type="text"
             placeholder="ex: MSFT"
           ></input>
-          <button className="search-btn">Search</button>
+          <button className="search-btn">Search ticker</button>
         </form>
       </div>
+
       <div className="main-container">
         <div className="stocks-list">
-          {/* <StocksGraphQL /> */}
           {ticker.map((favTicker) => (
             <StocksGraphQL name={favTicker} key={favTicker}></StocksGraphQL>
           ))}
         </div>
+
         <div className="stock-nav">
           <p>My Stocks</p>
         </div>

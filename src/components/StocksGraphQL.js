@@ -47,15 +47,20 @@ function StocksGraphQL(props) {
       <div className="info-div">
         <div className="second">
           <p className="stock-titles-p" id="department">
-            Current price:
+            {/* Current price: */}
           </p>{" "}
-          <p className="stock-info-p">{tickerPrice}</p>
+          <p className="stock-info-p">
+            <span className="card-titles">Current price: </span> ${tickerPrice}
+          </p>
         </div>
         <div className="third">
           <p className="stock-titles-p" id="description">
-            Previous closing price:
+            {/* Previous closing price: */}
           </p>{" "}
-          <p className="stock-info-p">{closingPrice}</p>
+          <p className="stock-info-p">
+            <span className="card-titles">Previous closing price: </span> $
+            {closingPrice}{" "}
+          </p>
         </div>
       </div>
     );
@@ -68,7 +73,7 @@ function StocksGraphQL(props) {
   return (
     <div className="class">
       <div className="class-title">
-        <h2 id="ticker-title">{ticker}</h2>
+        <h2 id="ticker-title">${ticker}</h2>
       </div>
       <div className="class-title">
         <p>{info}</p>

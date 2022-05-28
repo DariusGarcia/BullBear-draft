@@ -4,15 +4,15 @@ import "./Login.css";
 const Login = () => {
   return (
     <div className="parent">
-      <h1>
+      {/* <h1>
         {" "}
         <span className="bull">Bull</span>
         <span className="bear">Bear</span>
-      </h1>
+      </h1> */}
       <div className="login-container">
         <form className="login-form">
-          <h5>Please sign in or register if you haven't!</h5>
           <h2>Login</h2>
+          <h5>Please sign in or register if you haven't!</h5>
 
           <div className="label-box1">
             <label className="form-heading" htmlFor="username">

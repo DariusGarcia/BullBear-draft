@@ -1,16 +1,26 @@
 .class {
-    background-color: grey;
-    width: auto;
+    /* background-color: #393e58; */
+    background-color: #272b42;
     height: 50%;
+    width: 40%;
+    min-width: 250px;
     margin: 10px;
-    padding: 3px 3px 3px 3px;
     border-radius: 15px;
     font-size: .8rem;
+
+    /* display: grid; */
+
 }
+
+.class>* {
+    flex: 1 1 150px;
+}
+
+
 
 .class:hover {
     transform: scale(1.01);
-    box-shadow: 3px 3px 3px 3px #303030;
+    box-shadow: 3px 3px 5px #595c80;
 }
 
 .stock-titles-p {
@@ -18,10 +28,21 @@
     font-size: bold;
 }
 
-.class-title {
-    color: #00FA9A !important;
+.class-title p {
+    color: #ffffff !important;
+    display: flex;
+    padding-left: .5rem;
+    padding-top: 2px;
 }
 
 #ticker-title {
-    color: #00FA9A !important;
+    color: #ffffff !important;
+    display: flex;
+    place-content: center;
+
+}
+
+.card-titles {
+    padding-right: 3px;
+    color: rgb(189, 189, 189) !important;
 }
