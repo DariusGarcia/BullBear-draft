@@ -9,15 +9,8 @@ import "firebase/compat/auth";
 import "firebase/firestore";
 import "firebase/auth";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyAsfXqgdkKfCm1plMvR3HXxun9uZIV7AZA",
-  authDomain: "bullbear-be83d.firebaseapp.com",
-  projectId: "bullbear-be83d",
-  storageBucket: "bullbear-be83d.appspot.com",
-  messagingSenderId: "294185404688",
-  appId: "1:294185404688:web:4649963ed7ce2c84d8bd95",
-  measurementId: "G-DB92312QSG",
-};
+// firebase SDK specific configuration
+import { firebaseConfig } from "./firebaseUtils";
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -33,7 +26,7 @@ function Login() {
   const signInConst = () => {
     const provider = new GoogleAuthProvider();
     const auth = getAuth(app);
-    console.log("Signing in with Google");
+    console.log("Initializing Google Auth");
     signInWithPopup(auth, provider)
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
@@ -42,9 +35,10 @@ function Login() {
         // The signed-in user info.
         const user = result.user;
         console.log(user);
-        console.log("Signing in with Google");
-        // ...
+        console.log(`Welcome ${user.displayName}`);
+        console.log("Succesfully signed in with Google");
       })
+
       .catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
