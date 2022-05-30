@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/BullBear/static/css/main.12ef6d9b.css",
-    "main.js": "/BullBear/static/js/main.c98aa095.js",
+    "main.css": "/BullBear/static/css/main.2edb2bcc.css",
+    "main.js": "/BullBear/static/js/main.a2fceae5.js",
     "static/js/787.b6e38a9c.chunk.js": "/BullBear/static/js/787.b6e38a9c.chunk.js",
     "index.html": "/BullBear/index.html",
-    "main.12ef6d9b.css.map": "/BullBear/static/css/main.12ef6d9b.css.map",
-    "main.c98aa095.js.map": "/BullBear/static/js/main.c98aa095.js.map",
+    "main.2edb2bcc.css.map": "/BullBear/static/css/main.2edb2bcc.css.map",
+    "main.a2fceae5.js.map": "/BullBear/static/js/main.a2fceae5.js.map",
     "787.b6e38a9c.chunk.js.map": "/BullBear/static/js/787.b6e38a9c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.12ef6d9b.css",
-    "static/js/main.c98aa095.js"
+    "static/css/main.2edb2bcc.css",
+    "static/js/main.a2fceae5.js"
   ]
 }
