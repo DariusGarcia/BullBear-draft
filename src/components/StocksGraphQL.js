@@ -2,17 +2,14 @@ import "./StocksGraphQL.css";
 
 import React, { useState, useEffect } from "react";
 
+function dayPercentage(a) {}
 function StocksGraphQL(props) {
   const [ticker, setTicker] = useState([]);
   const [tickerPrice, setTickerPrice] = useState([]);
   const [closingPrice, setClosingPrice] = useState([]);
+  const [dayPercentage, setDayPercentage] = useState([]);
 
   useEffect(() => {
-    let resTicker;
-    let resPrice;
-    let resClosingPrice;
-    let res;
-
     const options = {
       method: "GET",
       headers: {
@@ -30,9 +27,12 @@ function StocksGraphQL(props) {
         const res = data["Global Quote"];
         const myRes = Object.values(res);
         setTicker(myRes[0]);
-        setTickerPrice(myRes[4]);
-        setClosingPrice(myRes[7]);
-        console.log(myRes[7]);
+        setTickerPrice((myRes[4] / 1).toFixed(2));
+        setClosingPrice((myRes[7] / 1).toFixed(2));
+
+        // calculates the % difference between the previous days closing price and the current price
+        setDayPercentage((((myRes[4] - myRes[7]) / myRes[7]) * 100).toFixed(2));
+        console.log(`${myRes[0]}`);
         console.log(myRes);
       })
       .catch((err) => console.error(err));
@@ -59,6 +59,10 @@ function StocksGraphQL(props) {
           <p className="stock-info-p">
             <span className="card-titles">Previous closing price: </span> $
             {closingPrice}{" "}
+          </p>
+          <p className="stock-info-p">
+            <span className="card-titles">24 hour change: </span>
+            {dayPercentage}%{" "}
           </p>
         </div>
       </div>
