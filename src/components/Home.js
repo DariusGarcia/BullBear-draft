@@ -31,7 +31,9 @@ function Home(props) {
         <li>Portfolio</li>
         <li>Messages</li>
         <li>
-          <SignOut />
+          {/* <button>
+            <SignOut />
+          </button> */}
         </li>
       </ul>
       {/* <h2 id="stock-market">Stock Market</h2> */}

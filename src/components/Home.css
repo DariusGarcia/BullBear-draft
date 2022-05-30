@@ -14,9 +14,10 @@
 .home-parent {
     margin: 0 auto;
     padding: 0;
-    background-color: #272b42;
+    /* background-color: #272b42; */
+    background-color: rgb(33, 40, 65);
     height: 100vh;
-
+    cursor: default;
 }
 
 
@@ -29,19 +30,20 @@
     gap: 3rem;
     justify-content: flex-end;
     position: relative;
-    cursor: pointer;
+    cursor: default;
     /* background-color: #393e58 */
 }
 
-.search-bar {
+/* .search-bar {
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: 80px;
-}
+} */
 
 .home-title {
+
     font-size: 1.7rem;
     position: absolute;
     display: flex;
@@ -64,10 +66,13 @@
 .main-container {
     display: flex;
     justify-content: center;
+
+
 }
 
 .stocks-list {
-    background-color: #1d1e29;
+    /* background-color: #1d1e29; */
+    background-color: rgb(17, 19, 34);
     width: 40%;
     border-radius: 15px;
     height: 60vh;
@@ -77,9 +82,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    box-shadow: 5px 5px 15px #40425c;
-    outline: 1px solid #40425c;
+    box-shadow: 10px 10px 20px rgb(9, 10, 17);
+    border: .5px solid rgb(9, 10, 17);
     margin-right: 3rem;
+    min-width: 300px;
+    max-height: 550px;
+    max-width: 1320px;
+    resize: both;
+    overflow: hand;
 
 }
 
@@ -92,11 +102,16 @@
     width: 25vw;
     height: 60vh;
     float: right;
-    background-color: #1d1e29;
+    background-color: rgb(17, 19, 34);
     border-radius: 15px;
     padding: 1rem;
-    outline: 1px solid #40425c;
-    box-shadow: 5px 5px 15px #40425c;
+    border: .5px solid rgb(9, 10, 17);
+    box-shadow: 10px 10px 20px rgb(9, 10, 17);
+
+}
+
+.stock-nav p {
+    color: white;
 }
 
 
@@ -104,7 +119,7 @@
     display: flex;
     justify-content: start;
     place-content: start;
-    margin-top: 2.5rem;
+    margin-top: 0.5rem;
 }
 
 
@@ -115,39 +130,47 @@
 .stocks-form {
     width: 60%;
     display: flex;
+    /* justify-content: center; */
     align-items: center;
-    justify-content: start;
-    place-content: center;
+    /* place-content: center; */
     margin-bottom: 1rem;
 }
 
 .search-bar {
     height: 30px;
     width: 20%;
-    margin-left: 1rem;
+    margin-left: .5rem;
 
     padding-left: 4px;
-    outline: 1px solid #1d1e29;
+    outline: .5px solid #1d1e29;
     border: none;
     background: none;
     box-shadow: 50px;
-    color: white;
+    color: rgb(255, 255, 255);
+
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 80px;
 }
 
+
 .search-bar:hover {
-    outline: 1px solid #303030;
-    background-color: #1d1e29;
+    outline: 1px solid rgb(62, 178, 206);
+    background-color: rgb(17, 19, 34);
 }
 
 .search-bar:focus {
-    outline: 1px solid #303030;
-    background-color: #1d1e29;
+    outline: 1px solid rgb(17, 19, 34);
+    background-color: transparent;
 }
 
 #search-label {
-    color: #ffffff;
+    color: white;
     width: 25%;
-    margin-left: 6rem, 50% auto;
+    /* margin-left: 6rem, 50% auto; */
+    padding-left: 30px;
     font-weight: bold;
     letter-spacing: 0.5px;
 
@@ -161,17 +184,17 @@
 }
 
 p {
-    color: rgb(255, 255, 255);
+    color: black;
 }
 
 .search-btn {
-    background-color: #1d1e29;
+    background-color: rgb(62, 178, 206);
     border: none;
     border-radius: 4px;
     height: 32px;
     padding: 10px;
     margin-left: 10px;
-    color: rgb(255, 255, 255);
+    color: white;
 
     display: flex;
     align-items: center;

@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 
 // ! firebase imports
 import { initializeApp } from "firebase/app";
@@ -38,16 +38,23 @@ const app = initializeApp(firebaseConfig);
 
 // const user = useAuthState(auth);
 function App() {
+  const [currentUser, setCurrentUser] = useState({});
   // if signed in: user is an object
   // if signed out: user is null
-
+  const auth = getAuth(app);
+  const user = auth.getCurrentUser;
+  if (user) {
+    setCurrentUser(user);
+    console.log(currentUser);
+  } else {
+    console.log("please sign in with Google");
+    console.log(currentUser);
+  }
   return (
     <>
-      <div className="App">
-        <Login />
-        <Home />
-        {/* {user ? <Home /> : <Login />} */}
-      </div>
+      <Login />
+      <Home />
+      {/* <div className="App">{currentUser && user ? <Home /> : <Login />}</div> */}
     </>
   );
 }

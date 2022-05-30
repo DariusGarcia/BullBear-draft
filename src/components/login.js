@@ -52,10 +52,17 @@ function Login() {
   return (
     <div className="parent">
       <h1 className="bullbear">BullBear</h1>
+      <div className="welcome-bullbear">
+        Welcome to BullBear! Get stock info for any stock included in the S&P500
+        index.
+      </div>
       <div className="login-container">
         <form className="login-form" onSubmit={handleSubmit}>
           <h2>Login</h2>
-          <h5>Please sign in or register if you haven't!</h5>
+          <h5>
+            Please sign in with Google Authentication or register with your own
+            username and password...
+          </h5>
 
           <div className="label-box1">
             <label className="form-heading" htmlFor="username">
@@ -88,13 +95,14 @@ function Login() {
                 type="submit"
                 onClick={signInConst}
               >
-                Sign in with Google
+                SIGN IN WITH GOOGLE
               </button>
               {/* <SignIn /> */}
             </div>
 
             <button className="up-btn" type="submit">
               <b>SIGN UP</b>
+              <div></div>
             </button>
           </div>
         </form>

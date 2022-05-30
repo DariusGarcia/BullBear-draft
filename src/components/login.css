@@ -8,9 +8,10 @@
 
 .parent {
     padding: 0;
-    background-color: #272b42;
+    background-color: rgb(17, 19, 34);
     height: 100vh;
     position: relative;
+    min-height: 100vh;
 }
 
 .login-container {
@@ -20,6 +21,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    min-height: 100vh;
     /* background-color: rgba(63, 85, 105, 0.445); */
     /* min-width: 400px; */
 }
@@ -31,6 +33,10 @@ h1, h2, h5 {
 
 h1 {
     font-size: 4rem;
+}
+
+h5 {
+    color: white;
 }
 
 .login-form h2 {
@@ -85,13 +91,14 @@ h1 {
     place-content: center;
     display: flex;
     align-items: center;
-    color: rgb(0, 0, 0);
+    color: white;
     justify-content: center;
     border: none;
     border-radius: 10px;
-    background-color: #00FA9A;
-    border: 1px solid black;
-    box-shadow: 5px 5px 7px rgb(44, 44, 44);
+    background-color: rgb(62, 178, 206);
+    border: 1.5px solid rgb(0, 0, 0);
+    box-shadow: 5px 5px 15px rgb(21, 56, 66);
+    font-variant: uppercase;
 
     cursor: pointer;
 }
@@ -109,17 +116,34 @@ h1 {
     border-radius: 10px;
     /* border: 1px solid black; */
     outline: 1px solid black;
-    box-shadow: 5px 5px 7px rgb(44, 44, 44);
+    box-shadow: 10px 10px 20px rgb(9, 10, 17);
     background-color: transparent;
     cursor: pointer;
 
 }
 
-.sign-btn:hover, .up-btn:hover {
+.welcome-bullbear {
+    /* position: absolute; */
+    padding: 6rem 0 0 1rem;
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.google-btn:hover {
+
+    transform: scale(0.99);
+    background-color: rgb(52, 155, 180);
+
+}
+
+.up-btn:hover {
 
     transform: scale(0.99);
     box-shadow: 0 0 110px rgba(33, 33, 33, .2);
-
+    background-color: rgb(13, 14, 26)
 }
 
 .input-email {
@@ -139,12 +163,14 @@ h1 {
 }
 
 .bullbear {
+    position: absolute;
     color: #ffffff;
     letter-spacing: 1px;
     display: bloc;
-    margin: 0;
+    margin: 1rem;
+
     padding: 0;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 
