@@ -1,14 +1,9 @@
 import "./signIn.css";
 import { initializeApp } from "firebase/app";
-
-import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/auth";
-
 import "firebase/firestore";
 import "firebase/auth";
-// import topo from '../topo.jpg';
-import FirebaseConfig from "./firebaseUtils";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 
@@ -53,13 +48,7 @@ function SignIn() {
       })
     );
 
-    return (
-      <>
-        {/* <button className="sign-btn" onclick={signInWithGoogle} type="submit">
-          <b>SIGN IN</b>
-        </button> */}
-      </>
-    );
+    return <></>;
   };
 }
 

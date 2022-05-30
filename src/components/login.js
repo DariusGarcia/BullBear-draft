@@ -26,7 +26,7 @@ function Login() {
   const signInConst = () => {
     const provider = new GoogleAuthProvider();
     const auth = getAuth(app);
-    console.log("Initializing Google Auth");
+    console.log("%cInitializing Google Auth", "color: yellow");
     signInWithPopup(auth, provider)
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
@@ -35,8 +35,8 @@ function Login() {
         // The signed-in user info.
         const user = result.user;
         console.log(user);
-        console.log(`Welcome ${user.displayName}`);
-        console.log("Succesfully signed in with Google");
+        console.log(`%cWelcome ${user.displayName}!`, "color: #00FA9A");
+        console.log("%cSuccessfully signed in with Google", "color: red");
       })
 
       .catch((error) => {
@@ -47,7 +47,6 @@ function Login() {
         const email = error.customData.email;
         // The AuthCredential type that was used.
         const credential = GoogleAuthProvider.credentialFromError(error);
-        // ...
       });
   };
   return (

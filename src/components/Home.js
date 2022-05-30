@@ -38,6 +38,7 @@ function Home(props) {
       <div className="search-box">
         <form className="stocks-form" onSubmit={handleSubmit}>
           <label id="search-label">Stock Market</label>
+          <label id="sp500-label">S&P500 index:</label>
           <input
             autoFocus
             value={value}

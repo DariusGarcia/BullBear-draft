@@ -23,7 +23,16 @@ function SignOut() {
   // Initialize Firebase Authentication and get a reference to the service
   const auth = getAuth(app);
   return (
-    auth.currentUser && <button onClick={() => auth.signOut()}>Sign Out</button>
+    auth.currentUser && (
+      <button
+        onClick={() => {
+          auth.signOut();
+          console.log("Successfully signed out...");
+        }}
+      >
+        Sign Out
+      </button>
+    )
   );
 }
 

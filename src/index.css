@@ -5,9 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-width: 900px;
-  width: auto !important;
-  width: 900px;
+  /* min-width: 900px; */
+  width: 100%;
+  /* width: 900px; */
 
 }
 
