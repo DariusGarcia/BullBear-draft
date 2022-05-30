@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Home.css";
 import StocksGraphQL from "./StocksGraphQL";
+import SignOut from "./signOut";
 
 function Home(props) {
   const [value, setValue] = useState("");
@@ -29,6 +30,9 @@ function Home(props) {
         <li>Market</li>
         <li>Portfolio</li>
         <li>Messages</li>
+        <li>
+          <SignOut />
+        </li>
       </ul>
       {/* <h2 id="stock-market">Stock Market</h2> */}
       <div className="search-box">
